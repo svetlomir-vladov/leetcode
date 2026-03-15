@@ -1,4 +1,5 @@
 #include <string>
+#include <algorithm>
 
 class Solution {
 public:
@@ -7,10 +8,11 @@ public:
 
         while (columnNumber > 0) {
             columnNumber -= 1;
-            result = char('A' + columnNumber % 26) + result;
+            result.push_back('A' + columnNumber % 26);
             columnNumber /= 26;
         }
 
+        std::reverse(result.begin(), result.end());
         return result;
     }
 };
