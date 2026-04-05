@@ -2,15 +2,6 @@
 #include <iostream>
 #include <queue>
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode() : val(0), left(nullptr), right(nullptr) {}
-    TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
-    TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
-};
-
 TreeNode* generate_complete_binary_tree(int nodes) {    
     std::queue<TreeNode*> q;
     TreeNode* root = new TreeNode(1);
@@ -34,14 +25,6 @@ void delete_tree (TreeNode* curr) {
     delete_tree(curr->right);
     delete curr;
 }
-
-struct ListNode {
-    int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
 ListNode* generate_linked_list(int arr[], int size) {
     ListNode* head = new ListNode(arr[0]);

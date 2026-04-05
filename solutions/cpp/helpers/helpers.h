@@ -10,8 +10,16 @@ struct TreeNode {
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+
 TreeNode* generate_complete_binary_tree(int nodes);
-void delete_tree (TreeNode* curr);
+void delete_tree(TreeNode* curr);
 
 ListNode* generate_linked_list(int arr[], int size);
 void print_linked_list(ListNode* head);
